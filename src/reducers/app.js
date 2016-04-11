@@ -8,7 +8,13 @@ const app = (
   action
 ) => {
   switch(action.type){
-    case actions.INIT:
+    case actions.CHARACTERS_GET:
+      return {
+        ...state,
+        loading: false,
+        charactersList: state.charactersList
+      }
+    case actions.INIT_ERROR:
       return {
         ...state,
         loading: false
