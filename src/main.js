@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import rootReducer from './reducers';
+import App from './containers/App.js';
 
 const initialState = {
   app: {
@@ -23,7 +24,7 @@ if (module.hot) {
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>Hello world, app is currently {initialState.app.loading ? "loading" : "loaded"}</div>
+    <App />
   </Provider>,
   document.getElementById('root')
 )
