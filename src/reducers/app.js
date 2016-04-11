@@ -12,7 +12,7 @@ const app = (
       return {
         ...state,
         loading: false,
-        charactersList: state.charactersList
+        charactersList: action.charactersList
       }
     case actions.INIT_ERROR:
       return {
